@@ -1,0 +1,27 @@
+{
+  "updatedAt": "2026-09-15",
+  "boundariesSource": "ISTAT, Confini delle unità amministrative a fini statistici, 1 gennaio 2026",
+  "boundariesFile": "it-provinces.geojson",
+  "areas": [
+    { "id": "alessandria", "geometryId": "uts:6", "labels": { "it": "Alessandria", "pt": "Alessandria", "en": "Alessandria", "es": "Alessandria", "zh": "亚历山德里亚", "ar": "ألساندريا" } },
+    { "id": "cagliari", "geometryId": "uts:318", "labels": { "it": "Cagliari", "pt": "Cagliari", "en": "Cagliari", "es": "Cagliari", "zh": "卡利亚里", "ar": "كالياري" } },
+    { "id": "catania", "geometryId": "uts:287", "labels": { "it": "Catania", "pt": "Catânia", "en": "Catania", "es": "Catania", "zh": "卡塔尼亚", "ar": "كاتانيا" } },
+    { "id": "chieti", "geometryId": "uts:69", "labels": { "it": "Chieti", "pt": "Chieti", "en": "Chieti", "es": "Chieti", "zh": "基耶蒂", "ar": "كييتي" } },
+    { "id": "cuneo", "geometryId": "uts:4", "labels": { "it": "Cuneo", "pt": "Cuneo", "en": "Cuneo", "es": "Cuneo", "zh": "库内奥", "ar": "كونيو" } },
+    { "id": "forli", "geometryId": "uts:40", "labels": { "it": "Forlì-Cesena", "pt": "Forlì-Cesena", "en": "Forlì-Cesena", "es": "Forlì-Cesena", "zh": "弗利-切塞纳", "ar": "فورلي-تشيزينا" } },
+    { "id": "milano", "geometryId": "uts:215", "labels": { "it": "Milano", "pt": "Milão", "en": "Milan", "es": "Milán", "zh": "米兰", "ar": "ميلانو" } },
+    { "id": "molise", "geometryId": "reg:14", "labels": { "it": "Molise", "pt": "Molise", "en": "Molise", "es": "Molise", "zh": "莫利塞", "ar": "موليزي" } },
+    { "id": "novara", "geometryId": "uts:3", "labels": { "it": "Novara", "pt": "Novara", "en": "Novara", "es": "Novara", "zh": "诺瓦拉", "ar": "نوفارا" } },
+    { "id": "oristano", "geometryId": "uts:115", "labels": { "it": "Oristano", "pt": "Oristano", "en": "Oristano", "es": "Oristano", "zh": "奥里斯塔诺", "ar": "أوريستانو" } },
+    { "id": "padova", "geometryId": "uts:28", "labels": { "it": "Padova", "pt": "Pádua", "en": "Padua", "es": "Padua", "zh": "帕多瓦", "ar": "بادوفا" } },
+    { "id": "pavia", "geometryId": "uts:18", "labels": { "it": "Pavia", "pt": "Pavia", "en": "Pavia", "es": "Pavía", "zh": "帕维亚", "ar": "بافيا" } },
+    { "id": "ravenna", "geometryId": "uts:39", "labels": { "it": "Ravenna", "pt": "Ravena", "en": "Ravenna", "es": "Rávena", "zh": "拉文纳", "ar": "رافينا" } },
+    { "id": "ragusa", "geometryId": "uts:88", "labels": { "it": "Ragusa", "pt": "Ragusa", "en": "Ragusa", "es": "Ragusa", "zh": "拉古萨", "ar": "راغوزا" } },
+    { "id": "rimini", "geometryId": "uts:99", "labels": { "it": "Rimini", "pt": "Rimini", "en": "Rimini", "es": "Rímini", "zh": "里米尼", "ar": "ريميني" } },
+    { "id": "rovigo", "geometryId": "uts:29", "labels": { "it": "Rovigo", "pt": "Rovigo", "en": "Rovigo", "es": "Rovigo", "zh": "罗维戈", "ar": "روفيغو" } },
+    { "id": "siracusa", "geometryId": "uts:89", "labels": { "it": "Siracusa", "pt": "Siracusa", "en": "Syracuse", "es": "Siracusa", "zh": "锡拉库萨", "ar": "سيراكوزا" } },
+    { "id": "sulcis-iglesiente", "geometryId": "uts:119", "source": "company-designated", "labels": { "it": "Sulcis Iglesiente", "pt": "Sulcis Iglesiente", "en": "Sulcis Iglesiente", "es": "Sulcis-Iglesiente", "zh": "苏尔奇斯-伊格莱西恩特", "ar": "سولتشيس إغليسيينتي" } },
+    { "id": "verbania", "geometryId": "uts:103", "labels": { "it": "Verbano-Cusio-Ossola", "pt": "Verbano-Cusio-Ossola", "en": "Verbano-Cusio-Ossola", "es": "Verbano-Cusio-Ossola", "zh": "韦尔巴诺-库西奥-奥索拉", "ar": "فربانو-كوزيو-أوسولا" } },
+    { "id": "vercelli", "geometryId": "uts:2", "labels": { "it": "Vercelli", "pt": "Vercelli", "en": "Vercelli", "es": "Vercelli", "zh": "韦尔切利", "ar": "فرشيلي" } }
+  ]
+}
