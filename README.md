@@ -43,7 +43,7 @@ Plain HTML5, CSS3 and vanilla JavaScript — no build step, no framework, no pac
 - **Interactive coverage map**: `js/map-init.js` builds its selectable-area list from `assets/data/service-areas.json` and draws administrative boundaries from `assets/data/it-provinces.geojson`. Areas indicate station coverage or a company-designated territory and are not a promise of service in every municipality.
 - **Dashboard access**: the external dashboard link only opens its normal login-protected site; this marketing website does not grant dashboard permissions.
 - **Driver recruitment**: the “Lavora con noi / Careers” section opens an email draft; it does not submit data automatically.
-- **Brand presentation**: the hero carries the current symbol on the operator's uniform and the last-mile image uses a compact Frascarelli vehicle; client and partner marks retain their original brand colors.
+- **Brand presentation**: the hero keeps the warehouse scene clean and the last-mile image uses a compact Frascarelli vehicle; client and partner marks retain their original brand colors.
 
 ### Updating the coverage map
 
@@ -167,7 +167,7 @@ HTML5, CSS3 e JavaScript puro — sem etapa de build, sem framework, sem gerenci
 - **Conteúdo multilíngue**: os textos visíveis ficam no dicionário `js/script.js` (`it`, `pt`, `en`, `es`, `zh`, `ar`); o árabe usa RTL.
 - **Mapa interativo**: a lista e as áreas selecionáveis vêm de `assets/data/service-areas.json`; os limites estão em `assets/data/it-provinces.geojson`. As áreas indicam a cobertura das estações ou territórios indicados pela empresa e não garantem atendimento em cada município.
 - **Acesso ao dashboard**: o link abre o dashboard, que continua controlando a própria autenticação e permissões.
-- **Imagens de marca**: o hero usa o símbolo atual no uniforme do operador; a seção last mile usa um furgão compacto genérico sem marca automotiva de terceiros.
+- **Imagens de marca**: o hero mantém a cena do armazém limpa; a seção last mile usa um furgão compacto genérico sem marca automotiva de terceiros.
 - **Trabalhe conosco**: a seção de motoristas abre um rascunho de e-mail, sem enviar dados automaticamente.
 - **Animações de rolagem e header fixo**: implementadas com `IntersectionObserver`, sem biblioteca externa de animação.
 
