@@ -1,95 +1,104 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#087a45" />
+  <meta name="theme-color" content="#009640" />
   <meta name="color-scheme" content="light" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Frascarelli Trasporti" />
   <meta name="description"
-    content="Frascarelli Trasporti: last mile, trasporto, movimentazione e deposito merci in oltre 10 province italiane." />
+    content="Frascarelli Trasporti: logistica, trasporto e consegne last mile. Oltre 2 milioni di pacchi consegnati." />
   <title>Frascarelli Trasporti | Last mile e logistica</title>
   <link rel="canonical" href="https://frascarellitrasporti.com/" />
   <link rel="alternate" hreflang="it" href="https://frascarellitrasporti.com/?lang=it" />
   <link rel="alternate" hreflang="pt-BR" href="https://frascarellitrasporti.com/?lang=pt" />
   <link rel="alternate" hreflang="en" href="https://frascarellitrasporti.com/?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://frascarellitrasporti.com/?lang=es" />
+  <link rel="alternate" hreflang="zh-CN" href="https://frascarellitrasporti.com/?lang=zh" />
+  <link rel="alternate" hreflang="ar" href="https://frascarellitrasporti.com/?lang=ar" />
   <link rel="alternate" hreflang="x-default" href="https://frascarellitrasporti.com/" />
-  <link rel="icon" href="assets/images/logo-main.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/images/logo-main.png" />
+  <link rel="icon" href="assets/images/frascarelli-symbol.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/frascarelli-symbol.png" />
   <link rel="manifest" href="site.webmanifest" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Frascarelli Trasporti" />
   <meta property="og:title" content="Frascarelli Trasporti | Last mile e logistica" />
   <meta property="og:description"
-    content="Soluzioni logistiche efficienti, flessibili e scalabili in oltre 10 province italiane." />
+    content="Frascarelli Trasporti: logistica, trasporto e consegne last mile. Oltre 2 milioni di pacchi consegnati." />
   <meta property="og:url" content="https://frascarellitrasporti.com/" />
-  <meta property="og:image" content="https://frascarellitrasporti.com/assets/photos/warehouse-hero.jpeg" />
+  <meta property="og:image" content="https://frascarellitrasporti.com/assets/photos/warehouse-hero-current-brand.jpeg?v=20260916-1" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="preload" as="image" href="assets/photos/warehouse-hero.jpeg" />
+  <link rel="preload" as="image" href="assets/photos/warehouse-hero-current-brand.jpeg?v=20260916-1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness"],
+    "@type": "Organization",
     "name": "Frascarelli Trasporti",
     "url": "https://frascarellitrasporti.com/",
-    "logo": "https://frascarellitrasporti.com/assets/images/logo-main.png",
-    "image": "https://frascarellitrasporti.com/assets/photos/warehouse-hero.jpeg",
+    "logo": "https://frascarellitrasporti.com/assets/images/frascarelli-brand-primary.png",
+    "image": "https://frascarellitrasporti.com/assets/photos/warehouse-hero-current-brand.jpeg?v=20260916-1",
     "email": "info@frascarellitrasporti.com",
     "taxID": "03172080214",
     "foundingDate": "2022",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via Giovanni Pascoli 14",
-      "addressLocality": "Abbiategrasso",
-      "postalCode": "20081",
-      "addressRegion": "MI",
-      "addressCountry": "IT"
-    },
     "areaServed": "Italia",
-    "knowsLanguage": ["it", "pt-BR", "en"]
+    "knowsLanguage": ["it", "pt-BR", "en", "es", "zh-CN", "ar"]
   }
   </script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Vai al contenuto</a>
+  <a class="skip-link" href="#main-content" data-i18n="skip.content">Vai al contenuto</a>
   <header class="site-header" data-header>
-    <a class="brand" href="#home" aria-label="Frascarelli Trasporti — Home">
-      <img src="assets/images/logo-main.png" alt="Frascarelli Trasporti" width="440" height="253" />
+    <a class="brand" href="#home" aria-label="Frascarelli Trasporti — Home" data-i18n-attr="aria-label:brand.home">
+      <img src="assets/images/frascarelli-brand-primary.png" alt="Frascarelli Trasporti" width="1400" height="282" />
     </a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Apri il menu">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Apri il menu"
+      data-i18n-attr="aria-label:menu.open">
       <span></span><span></span>
     </button>
 
-    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale"
+      data-i18n-attr="aria-label:nav.mainLabel">
       <a href="#company" data-i18n="nav.company">Chi siamo</a>
       <a href="#services" data-i18n="nav.services">Servizi</a>
       <a href="#sectors" data-i18n="nav.sectors">Settori</a>
       <a href="#clients" data-i18n="nav.clients">Clienti</a>
       <a href="#presence" data-i18n="nav.presence">Dove operiamo</a>
+      <a href="#careers" data-i18n="nav.careers">Lavora con noi</a>
       <a href="#contact" data-i18n="nav.contact">Contatti</a>
+      <a class="nav-dashboard" href="https://frascarelli-operations-dashboard-production.up.railway.app/"
+        target="_blank" rel="noopener noreferrer" data-i18n="nav.dashboard"
+        data-i18n-attr="title:nav.dashboardHint">Accedi al dashboard</a>
     </nav>
 
-    <div class="language-switch" aria-label="Selezione lingua">
-      <button class="lang-button active" type="button" data-lang="it" aria-pressed="true">IT</button>
-      <button class="lang-button" type="button" data-lang="pt" aria-pressed="false">PT</button>
-      <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+    <div class="language-switch">
+      <label class="visually-hidden" for="language-select" data-i18n="language.label">Lingua</label>
+      <select id="language-select" class="language-select" aria-label="Selezione lingua"
+        data-i18n-attr="aria-label:language.label">
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="ar">العربية</option>
+      </select>
     </div>
   </header>
 
   <main id="main-content">
     <section class="hero" id="home">
-      <img class="hero-image" src="assets/photos/warehouse-hero.jpeg" alt="Magazzino Frascarelli Trasporti operativo"
+      <img class="hero-image" src="assets/photos/warehouse-hero-current-brand.jpeg?v=20260916-1" alt="Magazzino Frascarelli Trasporti operativo"
+        data-i18n-attr="alt:hero.imageAlt"
         width="1448" height="1086" fetchpriority="high" />
       <div class="hero-shade"></div>
       <div class="hero-content reveal">
@@ -115,13 +124,10 @@
             <p class="lead" data-i18n="about.p1">Frascarelli Trasporti è un partner logistico specializzato nella
               gestione delle consegne last mile e nei servizi di trasporto, con un'organizzazione costruita su
               efficienza, puntualità e qualità.</p>
-            <p data-i18n="about.p2">Fondata nel 2022, l'azienda ha conosciuto una crescita costante e oggi opera in
-              oltre 10 province italiane, collaborando con importanti operatori del settore logistico e gestendo
-              migliaia
-              di spedizioni destinate ai clienti finali.</p>
-            <p data-i18n="about.p3">Nel solo ultimo anno abbiamo completato oltre 350.000 consegne, un traguardo che
-              testimonia la solidità dei nostri processi, la professionalità del nostro team e la fiducia che i nostri
-              partner ripongono in noi.</p>
+            <p data-i18n="about.p2">Fondata nel 2022, l'azienda è cresciuta insieme ai propri partner e alla rete
+              logistica italiana, costruendo esperienza nella gestione delle spedizioni fino alla destinazione finale.</p>
+            <p data-i18n="about.p3">Abbiamo superato i 2 milioni di pacchi consegnati. Un traguardo costruito
+              consegna dopo consegna grazie ai processi operativi, al lavoro delle persone e alla fiducia dei partner.</p>
             <p data-i18n="about.p4">La nostra missione è offrire soluzioni logistiche efficienti, flessibili e
               scalabili, contribuendo alla crescita dei nostri partner attraverso un servizio orientato all'eccellenza
               operativa.</p>
@@ -130,16 +136,16 @@
 
         <div class="stats-grid">
           <article class="stat-card reveal"><strong>2022</strong>
-            <h3 data-i18n="stats.one.title">Costruiamo il futuro</h3>
-            <p data-i18n="stats.one.copy">Oltre 4 anni di crescita costante.</p>
+            <h3 data-i18n="stats.one.title">Fondata nel 2022</h3>
+            <p data-i18n="stats.one.copy">Una rete logistica che continua a crescere.</p>
           </article>
-          <article class="stat-card stat-accent reveal"><strong>350.000+</strong>
+          <article class="stat-card stat-accent reveal"><strong>2.000.000+</strong>
             <h3 data-i18n="stats.two.title">Pacchi consegnati</h3>
-            <p data-i18n="stats.two.copy">Un traguardo raggiunto nel solo ultimo anno.</p>
+            <p data-i18n="stats.two.copy">Un traguardo costruito consegna dopo consegna.</p>
           </article>
-          <article class="stat-card reveal"><strong>10+</strong>
-            <h3 data-i18n="stats.three.title">Province coperte</h3>
-            <p data-i18n="stats.three.copy">Una presenza in continua espansione sul territorio italiano.</p>
+          <article class="stat-card reveal"><strong data-i18n="stats.three.value">Italia</strong>
+            <h3 data-i18n="stats.three.title">Rete operativa</h3>
+            <p data-i18n="stats.three.copy">Aree di copertura in evoluzione.</p>
           </article>
         </div>
       </div>
@@ -211,7 +217,7 @@
           <p data-i18n="sectors.copy">Competenze operative che si adattano a prodotti, ritmi e destinazioni differenti.
           </p>
         </div>
-        <div class="sector-orbit" aria-label="Settori serviti">
+        <div class="sector-orbit" aria-label="Settori serviti" data-i18n-attr="aria-label:sectors.listLabel">
           <article class="sector-card reveal"><svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 21h18M5 21V9l7-5v17M12 11l7-3v13M8 12h1M8 16h1M15 12h1M15 16h1" />
             </svg>
@@ -251,7 +257,7 @@
         <div class="section-intro reveal">
           <p class="kicker" data-i18n="clients.kicker">Clienti e partner</p>
           <h2 data-i18n="clients.title">Relazioni costruite lungo tutta la filiera.</h2>
-          <p data-i18n="clients.copy">Esperienze, collaborazioni attuali e alleanze last mile che raccontano la nostra
+          <p data-i18n="clients.copy">Esperienze, collaborazioni e alleanze last mile che raccontano la nostra
             crescita.</p>
         </div>
 
@@ -275,8 +281,8 @@
           <article class="client-group reveal">
             <div class="group-heading">
               <div>
-                <p data-i18n="clients.current.label">Oggi</p>
-                <h3 data-i18n="clients.current.title">I nostri attuali collaboratori</h3>
+                <p data-i18n="clients.current.label">Collaborazioni</p>
+                <h3 data-i18n="clients.current.title">Aziende e realtà incontrate nel nostro percorso</h3>
               </div>
             </div>
             <div class="logo-grid logo-grid-six">
@@ -293,18 +299,18 @@
             <div class="group-heading">
               <div>
                 <p data-i18n="clients.lastmile.label">Rete nazionale</p>
-                <h3 data-i18n="clients.lastmile.title">Le nostre principali alleanze per il last mile in tutta Italia
+                <h3 data-i18n="clients.lastmile.title">Reti specializzate per il last mile
                 </h3>
               </div>
             </div>
             <figure class="last-mile-visual">
-              <img src="assets/illustrations/last-mile-frascarelli.jpg"
-                alt="Furgone Frascarelli Trasporti durante una consegna last mile" width="1672" height="941"
-                loading="lazy" />
+              <img src="assets/illustrations/last-mile-frascarelli-compact-van.png?v=20260915-2"
+                alt="Furgone Frascarelli Trasporti per le consegne dell'ultimo miglio"
+                data-i18n-attr="alt:clients.lastmile.imageAlt" width="1672" height="941" loading="lazy" />
             </figure>
             <div class="last-mile-content">
-              <p data-i18n="clients.lastmile.copy">Partner specializzati che ampliano la nostra capacità di consegna e
-                la presenza sul territorio.</p>
+              <p data-i18n="clients.lastmile.copy">Le reti specializzate possono ampliare la capacità di consegna e la
+                presenza sul territorio.</p>
               <div class="logo-grid logo-grid-two"><img src="assets/clients/imile.png" alt="iMile" loading="lazy" /><img
                   src="assets/clients/gofo.jpeg" alt="GOFO" loading="lazy" /></div>
             </div>
@@ -317,92 +323,40 @@
       <div class="section-shell">
         <div class="section-intro centered reveal">
           <p class="kicker" data-i18n="presence.kicker">Dove operiamo</p>
-          <h2 data-i18n="presence.title">Le province dove siamo presenti</h2>
+          <h2 data-i18n="presence.title">Le nostre aree di copertura</h2>
+          <p class="presence-note" data-i18n="presence.note">Aree operative indicative, ricavate dalla copertura
+            registrata delle stazioni e dalle aree indicate da Frascarelli; la mappa non sostituisce una verifica per singolo comune.</p>
         </div>
         <div class="presence-layout">
-          <div class="map-container reveal" id="map"></div>
+          <div class="map-container reveal" id="map" role="region" aria-label="Mappa delle aree di copertura"
+            data-i18n-attr="aria-label:presence.mapLabel"></div>
           <div class="provinces-list reveal">
-            <h3 data-i18n="presence.listTitle">Province dove operiamo</h3>
-            <div class="provinces-grid">
-              <div class="province-item" data-province="cuneo">
-                <span class="province-dot"></span>
-                <p><strong>CUNEO</strong><br /><small>Piemonte</small></p>
-              </div>
-              <div class="province-item" data-province="verbania">
-                <span class="province-dot"></span>
-                <p><strong>VERBANIA</strong><br /><small>Piemonte</small></p>
-              </div>
-              <div class="province-item" data-province="novara">
-                <span class="province-dot"></span>
-                <p><strong>NOVARA</strong><br /><small>Piemonte</small></p>
-              </div>
-              <div class="province-item" data-province="milano">
-                <span class="province-dot"></span>
-                <p><strong>MILANO</strong><br /><small>Lombardia</small></p>
-              </div>
-              <div class="province-item" data-province="pavia">
-                <span class="province-dot"></span>
-                <p><strong>PAVIA</strong><br /><small>Lombardia</small></p>
-              </div>
-              <div class="province-item" data-province="alessandria">
-                <span class="province-dot"></span>
-                <p><strong>ALESSANDRIA</strong><br /><small>Piemonte</small></p>
-              </div>
-              <div class="province-item" data-province="vercelli">
-                <span class="province-dot"></span>
-                <p><strong>VERCELLI</strong><br /><small>Piemonte</small></p>
-              </div>
-              <div class="province-item" data-province="padova">
-                <span class="province-dot"></span>
-                <p><strong>PADOVA</strong><br /><small>Veneto</small></p>
-              </div>
-              <div class="province-item" data-province="rovigo">
-                <span class="province-dot"></span>
-                <p><strong>ROVIGO</strong><br /><small>Veneto</small></p>
-              </div>
-              <div class="province-item" data-province="forli">
-                <span class="province-dot"></span>
-                <p><strong>FORLÌ</strong><br /><small>Emilia-Romagna</small></p>
-              </div>
-              <div class="province-item" data-province="ravenna">
-                <span class="province-dot"></span>
-                <p><strong>RAVENNA</strong><br /><small>Emilia-Romagna</small></p>
-              </div>
-              <div class="province-item" data-province="rimini">
-                <span class="province-dot"></span>
-                <p><strong>RIMINI</strong><br /><small>Emilia-Romagna</small></p>
-              </div>
-              <div class="province-item" data-province="chieti">
-                <span class="province-dot"></span>
-                <p><strong>CHIETI</strong><br /><small>Abruzzo</small></p>
-              </div>
-              <div class="province-item" data-province="molise">
-                <span class="province-dot"></span>
-                <p><strong>MOLISE</strong><br /><small>Molise</small></p>
-              </div>
-              <div class="province-item" data-province="cagliari">
-                <span class="province-dot"></span>
-                <p><strong>CAGLIARI</strong><br /><small>Sardegna</small></p>
-              </div>
-              <div class="province-item" data-province="oristano">
-                <span class="province-dot"></span>
-                <p><strong>ORISTANO</strong><br /><small>Sardegna</small></p>
-              </div>
-              <div class="province-item" data-province="catania">
-                <span class="province-dot"></span>
-                <p><strong>CATANIA</strong><br /><small>Sicilia</small></p>
-              </div>
-              <div class="province-item" data-province="ragusa">
-                <span class="province-dot"></span>
-                <p><strong>RAGUSA</strong><br /><small>Sicilia</small></p>
-              </div>
-              <div class="province-item" data-province="siracusa">
-                <span class="province-dot"></span>
-                <p><strong>SIRACUSA</strong><br /><small>Sicilia</small></p>
-              </div>
-            </div>
+            <h3 data-i18n="presence.listTitle">Aree operative</h3>
+            <div class="provinces-grid" data-area-list></div>
           </div>
         </div>
+        <p class="map-attribution" data-i18n="presence.mapSource">Confini amministrativi generalizzati: ISTAT, 1 gennaio 2026.</p>
+      </div>
+    </section>
+
+    <section class="careers section section-dark" id="careers">
+      <div class="section-shell careers-layout">
+        <div class="careers-copy reveal">
+          <p class="kicker" data-i18n="careers.kicker">Lavora con noi</p>
+          <h2 data-i18n="careers.title">Metti in movimento il tuo prossimo percorso.</h2>
+          <p data-i18n="careers.copy">Siamo sempre interessati a conoscere autisti e corrieri affidabili che vogliano
+            collaborare con Frascarelli Trasporti nelle aree in cui operiamo.</p>
+          <p data-i18n="careers.details">Raccontaci la tua esperienza, la disponibilità e il territorio in cui puoi
+            lavorare. Valuteremo insieme le opportunità compatibili, senza impegno.</p>
+          <a class="button button-primary" href="mailto:info@frascarellitrasporti.com?subject=Candidatura%20driver%20-%20Frascarelli%20Trasporti"
+            data-i18n="careers.cta" data-i18n-attr="href:careers.emailHref">Invia la tua candidatura</a>
+        </div>
+        <aside class="careers-card reveal">
+          <span aria-hidden="true">01</span>
+          <h3 data-i18n="careers.cardTitle">Persone, affidabilità, territorio.</h3>
+          <p data-i18n="careers.cardCopy">Ogni collaborazione parte da un dialogo diretto sulle competenze e sulle
+            esigenze operative.</p>
+        </aside>
       </div>
     </section>
 
@@ -413,7 +367,7 @@
           <h2 data-i18n="contact.title">Diamo movimento alla tua prossima sfida.</h2>
           <p data-i18n="contact.copy">Raccontaci cosa devi organizzare. Ti risponderemo con un supporto operativo
             costruito sulle tue esigenze.</p>
-          <a class="email-box"
+          <a class="email-box" data-i18n-attr="href:contact.emailHref"
             href="mailto:info@frascarellitrasporti.com?subject=Richiesta%20informazioni%20-%20Frascarelli%20Trasporti"><span><small
                 data-i18n="contact.action">Scrivici ora</small>info@frascarellitrasporti.com</span><b
               aria-hidden="true"><svg viewBox="0 0 24 24">
@@ -432,13 +386,16 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand"><img src="assets/images/logo-main.png" alt="Frascarelli Trasporti" width="440" height="253" />
+    <div class="footer-brand"><img src="assets/images/frascarelli-brand-primary.png"
+      alt="Frascarelli Trasporti" width="1400" height="282" />
       <p data-i18n="footer.tagline">Last mile e logistica per imprese che vogliono crescere.</p>
     </div>
-    <nav aria-label="Navigazione piè di pagina"><a href="#company" data-i18n="nav.company">Chi siamo</a><a
+    <nav aria-label="Navigazione piè di pagina" data-i18n-attr="aria-label:footer.navLabel"><a href="#company" data-i18n="nav.company">Chi siamo</a><a
         href="#services" data-i18n="nav.services">Servizi</a><a href="#sectors"
         data-i18n="nav.sectors">Settori</a><a href="#clients" data-i18n="nav.clients">Clienti</a><a href="#presence"
-        data-i18n="nav.presence">Dove operiamo</a><a href="#contact" data-i18n="nav.contact">Contatti</a></nav>
+        data-i18n="nav.presence">Dove operiamo</a><a href="#careers" data-i18n="nav.careers">Lavora con noi</a><a
+        href="#contact" data-i18n="nav.contact">Contatti</a><a href="https://frascarelli-operations-dashboard-production.up.railway.app/"
+        target="_blank" rel="noopener noreferrer" data-i18n="nav.dashboard">Accedi al dashboard</a></nav>
     <p>© <span data-year></span> Frascarelli Trasporti · P. IVA 03172080214</p>
   </footer>
 

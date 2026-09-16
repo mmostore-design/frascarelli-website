@@ -1,17 +1,17 @@
 {
   "name": "Frascarelli Trasporti",
   "short_name": "Frascarelli",
-  "description": "Last mile, trasporto, movimentazione e deposito merci in oltre 10 città italiane.",
+  "description": "Trasporto, deposito e consegne last mile. Oltre 2 milioni di pacchi consegnati.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#008d4e",
+  "theme_color": "#009640",
   "lang": "it",
   "icons": [
     {
-      "src": "assets/images/logo-main.png",
-      "sizes": "440x253",
+      "src": "assets/images/frascarelli-symbol.png",
+      "sizes": "1000x1000",
       "type": "image/png",
       "purpose": "any"
     }

@@ -10,11 +10,11 @@ Live site: [frascarellitrasporti.com](https://frascarellitrasporti.com)
 
 ### About
 
-Static marketing website for **Frascarelli Trasporti**, an Italian logistics company specializing in last-mile delivery, transport, loading/unloading and warehousing across 10+ Italian provinces. The site is a single `index.html` page with smooth-scroll navigation, built-in **IT / PT-BR / EN** language switching, scroll-reveal animations, and an interactive map of the provinces served.
+Static marketing website for **Frascarelli Trasporti**, an Italian logistics company specializing in last-mile delivery, transport, loading/unloading and warehousing. The site is a single `index.html` page with **IT / PT-BR / EN / ES / ZH-CN / AR** language switching, a driver-recruitment section and an interactive map of indicative service areas.
 
 ### Tech stack
 
-Plain HTML5, CSS3 and vanilla JavaScript — no build step, no framework, no package manager. The only external dependency is [Leaflet](https://leafletjs.com/) (loaded via CDN) for the interactive map.
+Plain HTML5, CSS3 and vanilla JavaScript — no build step, no framework, no package manager. [Leaflet](https://leafletjs.com/) and the web fonts are loaded from third-party CDNs; OpenStreetMap provides the map tiles.
 
 ### Project structure
 
@@ -31,7 +31,7 @@ Plain HTML5, CSS3 and vanilla JavaScript — no build step, no framework, no pac
 │   ├── illustrations/       Illustrations used in content sections
 │   ├── clients/              Client and partner logos
 │   └── data/                 GeoJSON province boundaries for the map
-├── documents/               Internal reference files (business plan, master logo, screenshot) — not linked from the site
+├── documents/               Legacy reference files tracked in this public repository; review before publication
 ├── CNAME                   Custom domain for GitHub Pages
 ├── robots.txt / sitemap.xml SEO
 └── site.webmanifest        PWA/icon manifest
@@ -39,8 +39,21 @@ Plain HTML5, CSS3 and vanilla JavaScript — no build step, no framework, no pac
 
 ### Key features
 
-- **Multi-language content**: all copy lives in a translation dictionary in `js/script.js` (`it`, `pt`, `en`); the active language is persisted in `localStorage` and reflected in the URL (`?lang=`).
-- **Interactive presence map**: `js/map-init.js` renders an Italy map with the served provinces highlighted, using boundary data from `assets/data/it-provinces.geojson`.
+- **Multi-language content**: visible copy lives in `js/script.js` (`it`, `pt`, `en`, `es`, `zh`, `ar`); the active language is persisted in `localStorage` and reflected in the URL (`?lang=`). Arabic uses RTL layout.
+- **Interactive coverage map**: `js/map-init.js` builds its selectable-area list from `assets/data/service-areas.json` and draws administrative boundaries from `assets/data/it-provinces.geojson`. Areas indicate station coverage or a company-designated territory and are not a promise of service in every municipality.
+- **Dashboard access**: the external dashboard link only opens its normal login-protected site; this marketing website does not grant dashboard permissions.
+- **Driver recruitment**: the “Lavora con noi / Careers” section opens an email draft; it does not submit data automatically.
+- **Brand presentation**: the hero keeps the warehouse scene clean and the last-mile image uses a compact Frascarelli vehicle; client and partner marks retain their original brand colors.
+
+### Updating the coverage map
+
+Keep area IDs, display names and labels for all six languages in `assets/data/service-areas.json`. The map list and polygon selection are generated from this single file; no centroid markers are used. `geometryId` refers to an ISTAT province (`uts:<code>`) or region (`reg:<code>`), so Molise is intentionally represented as a region. Sulcis Iglesiente is explicitly company-designated (`source: company-designated`) and is not present in the current station-coverage registry. To refresh boundaries, download ISTAT's generalized 2026 WGS84 UTM32N shapefile ZIP and run:
+
+```bash
+python scripts/build-coverage-geojson.py path/to/Limiti01012026_g.zip --output /tmp/it-provinces.geojson
+```
+
+Review the resulting shapes and IDs before replacing `assets/data/it-provinces.geojson`. Source: [ISTAT administrative boundaries](https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/). Include the administrative-boundary attribution when redistributing the map.
 - **Scroll animations & sticky header**: implemented with `IntersectionObserver`, no external animation library.
 
 ### Running locally
@@ -65,11 +78,11 @@ The site is deployed via **GitHub Pages** on the `main` branch, with a custom do
 
 ### Descrizione
 
-Sito web statico per **Frascarelli Trasporti**, azienda logistica italiana specializzata in consegne last mile, trasporto, carico/scarico e deposito merci in oltre 10 province italiane. Il sito è una singola pagina (`index.html`) con navigazione a scorrimento fluido, cambio lingua integrato **IT / PT-BR / EN**, animazioni di comparsa allo scroll e una mappa interattiva delle province servite.
+Sito web statico per **Frascarelli Trasporti**, azienda logistica italiana specializzata in consegne last mile, trasporto, carico/scarico e deposito merci. Il sito è una singola pagina (`index.html`) con contenuti in **IT / PT-BR / EN / ES / ZH-CN / AR**, sezione dedicata agli autisti e mappa interattiva delle aree operative indicative.
 
 ### Stack tecnologico
 
-HTML5, CSS3 e JavaScript puro — nessun build step, nessun framework, nessun package manager. L'unica dipendenza esterna è [Leaflet](https://leafletjs.com/) (caricata via CDN) per la mappa interattiva.
+HTML5, CSS3 e JavaScript puro — nessun build step, nessun framework, nessun package manager. [Leaflet](https://leafletjs.com/) e i web font sono caricati da CDN esterne; OpenStreetMap fornisce le mappe di base.
 
 ### Struttura del progetto
 
@@ -86,7 +99,7 @@ HTML5, CSS3 e JavaScript puro — nessun build step, nessun framework, nessun pa
 │   ├── illustrations/       Illustrazioni usate nelle sezioni di contenuto
 │   ├── clients/              Loghi di clienti e partner
 │   └── data/                 Confini delle province (GeoJSON) per la mappa
-├── documents/               File di riferimento interni (business plan, logo master, screenshot) — non collegati al sito
+├── documents/               File legacy versionati nel repository pubblico; da verificare prima della pubblicazione
 ├── CNAME                   Dominio personalizzato per GitHub Pages
 ├── robots.txt / sitemap.xml SEO
 └── site.webmanifest        Manifest PWA/icone
@@ -94,8 +107,10 @@ HTML5, CSS3 e JavaScript puro — nessun build step, nessun framework, nessun pa
 
 ### Funzionalità principali
 
-- **Contenuti multilingua**: tutti i testi vivono in un dizionario di traduzione in `js/script.js` (`it`, `pt`, `en`); la lingua attiva viene salvata in `localStorage` e riflessa nell'URL (`?lang=`).
-- **Mappa di presenza interattiva**: `js/map-init.js` mostra una mappa d'Italia con le province servite evidenziate, usando i confini da `assets/data/it-provinces.geojson`.
+- **Contenuti multilingua**: i testi visibili sono nel dizionario `js/script.js` (`it`, `pt`, `en`, `es`, `zh`, `ar`); l'arabo usa la direzione RTL.
+- **Mappa interattiva**: elenco e aree selezionabili derivano da `assets/data/service-areas.json`; i confini sono in `assets/data/it-provinces.geojson`. Le aree indicano la copertura delle stazioni o un territorio indicato dall'azienda, senza garantire il servizio in ogni comune.
+- **Accesso al dashboard**: il link apre il sito del dashboard, che continua a gestire autonomamente autenticazione e autorizzazioni.
+- **Lavora con noi**: la sezione autisti apre una bozza di email, senza inviare dati automaticamente.
 - **Animazioni allo scroll & header sticky**: realizzate con `IntersectionObserver`, senza librerie di animazione esterne.
 
 ### Esecuzione in locale
@@ -120,11 +135,11 @@ Il sito è pubblicato tramite **GitHub Pages** sul branch `main`, con dominio pe
 
 ### Sobre
 
-Site institucional estático da **Frascarelli Trasporti**, empresa de logística italiana especializada em entregas de última milha, transporte, carga/descarga e armazenagem em mais de 10 províncias italianas. O site é uma única página (`index.html`) com navegação por rolagem suave, troca de idioma integrada **IT / PT-BR / EN**, animações de revelação ao rolar a página e um mapa interativo das províncias atendidas.
+Site institucional estático da **Frascarelli Trasporti**, empresa de logística italiana especializada em entregas de última milha, transporte, carga/descarga e armazenagem. O site é uma única página (`index.html`) com **IT / PT-BR / EN / ES / ZH-CN / AR**, seção para motoristas e mapa das áreas operacionais indicativas.
 
 ### Stack tecnológica
 
-HTML5, CSS3 e JavaScript puro — sem etapa de build, sem framework, sem gerenciador de pacotes. A única dependência externa é o [Leaflet](https://leafletjs.com/) (carregado via CDN) para o mapa interativo.
+HTML5, CSS3 e JavaScript puro — sem etapa de build, sem framework, sem gerenciador de pacotes. O [Leaflet](https://leafletjs.com/) e as fontes web são carregados por CDNs externas; o OpenStreetMap fornece os mapas-base.
 
 ### Estrutura do projeto
 
@@ -141,7 +156,7 @@ HTML5, CSS3 e JavaScript puro — sem etapa de build, sem framework, sem gerenci
 │   ├── illustrations/       Ilustrações usadas nas seções de conteúdo
 │   ├── clients/              Logos de clientes e parceiros
 │   └── data/                 Limites das províncias (GeoJSON) para o mapa
-├── documents/               Arquivos de referência internos (business plan, logo master, screenshot) — não usados pelo site
+├── documents/               Arquivos legados versionados no repositório público; revisar antes da publicação
 ├── CNAME                   Domínio customizado para o GitHub Pages
 ├── robots.txt / sitemap.xml SEO
 └── site.webmanifest        Manifest PWA/ícones
@@ -149,8 +164,11 @@ HTML5, CSS3 e JavaScript puro — sem etapa de build, sem framework, sem gerenci
 
 ### Principais funcionalidades
 
-- **Conteúdo multilíngue**: todos os textos ficam em um dicionário de tradução em `js/script.js` (`it`, `pt`, `en`); o idioma ativo é salvo no `localStorage` e refletido na URL (`?lang=`).
-- **Mapa de presença interativo**: `js/map-init.js` renderiza um mapa da Itália com as províncias atendidas em destaque, usando os limites de `assets/data/it-provinces.geojson`.
+- **Conteúdo multilíngue**: os textos visíveis ficam no dicionário `js/script.js` (`it`, `pt`, `en`, `es`, `zh`, `ar`); o árabe usa RTL.
+- **Mapa interativo**: a lista e as áreas selecionáveis vêm de `assets/data/service-areas.json`; os limites estão em `assets/data/it-provinces.geojson`. As áreas indicam a cobertura das estações ou territórios indicados pela empresa e não garantem atendimento em cada município.
+- **Acesso ao dashboard**: o link abre o dashboard, que continua controlando a própria autenticação e permissões.
+- **Imagens de marca**: o hero mantém a cena do armazém limpa; a seção last mile usa um furgão compacto genérico sem marca automotiva de terceiros.
+- **Trabalhe conosco**: a seção de motoristas abre um rascunho de e-mail, sem enviar dados automaticamente.
 - **Animações de rolagem e header fixo**: implementadas com `IntersectionObserver`, sem biblioteca externa de animação.
 
 ### Rodando localmente
