@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 92px;
 }
 
 body {
@@ -83,7 +84,7 @@ svg {
 }
 
 .site-header {
-  position: fixed;
+  position: sticky;
   z-index: 100;
   top: 0;
   left: 0;
@@ -1098,6 +1099,10 @@ svg {
 @media (max-width: 820px) {
   :root {
     --shell: calc(100vw - 36px);
+  }
+
+  html {
+    scroll-padding-top: 72px;
   }
 
   .site-header {
