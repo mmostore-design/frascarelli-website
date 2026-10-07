@@ -144,6 +144,8 @@ const interfaceDetails = {
 };
 Object.entries(interfaceDetails).forEach(([language, entries]) => Object.assign(translations[language], entries));
 
+const isSupportedLanguage = (language) => typeof language === "string" && Object.hasOwn(translations, language);
+
 const languageSelect = document.querySelector("#language-select");
 const translatedNodes = document.querySelectorAll("[data-i18n]");
 const translatedAttributes = document.querySelectorAll("[data-i18n-attr]");
@@ -161,7 +163,7 @@ const seo = {
 };
 
 function setLanguage(language, updateUrl = true) {
-  const selected = translations[language] ? language : "it";
+  const selected = isSupportedLanguage(language) ? language : "it";
   const dictionary = translations[selected];
 
   translatedNodes.forEach((node) => {
@@ -266,4 +268,4 @@ try {
 } catch {
   // Default to Italian when browser storage is disabled.
 }
-setLanguage(translations[requested] ? requested : (translations[saved] ? saved : "it"), false);
+setLanguage(isSupportedLanguage(requested) ? requested : (isSupportedLanguage(saved) ? saved : "it"), false);
